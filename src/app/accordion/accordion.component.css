@@ -1,0 +1,31 @@
+.accordions{display: flex;flex-direction:column;padding-top: 64px;padding-bottom: 64px;font-family: 'Open Sans', sans-serif;}
+.accordion-item{
+    border: solid 1px #d7d9e0;
+    background-color: #f0f1f5;
+}
+.accordion-item.active{
+    background-color: #fff;
+    border-left: 2px solid #00baf2;
+    border-right: 2px solid #00baf2;
+}
+.acc-header{
+    padding: 10px 16px;
+    font-size: 15px;
+    letter-spacing: normal;
+    color: #273645;
+}
+.accordion-item.active .acc-header{font-weight: bold;}
+.acc-body{
+    padding: 6px 48px 6px 16px;
+    font-size: 15px;
+    line-height: 22px;
+}
+p{margin-bottom:10px;}
+.no-btn{
+    background: none;
+    border: none;
+    float: right;
+    color: #0019af;
+    font-size: 12px;
+}
+.no-btn:focus{outline: none;}

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col accordions">
+            <div *ngFor="let acc of accordions[activeIndex]" class="accordion-item" [ngClass]="acc.active && 'active'">
+                <div class="acc-header" (click)="setActive(acc)">{{acc.header}} <button class="no-btn">
+                        <i class="fa fa-2x" [ngClass]="acc.active ? 'fa-angle-up' : 'fa-angle-down'"
+                            aria-hidden="true"></i>
+                    </button></div>
+                <div class="acc-body" *ngIf="acc.active">
+                    <p>{{acc.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

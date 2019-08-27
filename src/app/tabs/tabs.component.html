@@ -1,0 +1,11 @@
+<nav>
+    <div class="container">
+        <ul class="row">
+            <li *ngFor="let tab of tabs" class="tab" [ngClass]="tab.active && 'active'">
+                <a (click)="setActive(tab)">{{tab.name}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<app-accordion *ngIf="accordions.length" [activeIndex]="activeIndex" [accordions]="accordions"></app-accordion>
