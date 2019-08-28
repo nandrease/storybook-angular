@@ -1,9 +1,11 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { Welcome } from '@storybook/angular/demo';
 import { TabsComponent } from '../app/tabs/tabs.component';
 import { AccordionComponent } from '../app/accordion/accordion.component';
+import accordionMarkdown from '../app/accordion/accordionreadme.md';
+import tabsMarkdown from '../app/tabs/tabsreadme.md';
+import tabsaccordionMarkdown from '../app/tabs/tabsaccordionreadme.md';
 
 const tabs: any[] = [
   { name: 'tab', active: true },
@@ -48,7 +50,7 @@ storiesOf('Tabs', module)
       accordions: []
     },
   }),
-    { notes: 'Simple tabs component' })
+  {notes: { markdown: tabsMarkdown }})
   .add('Tabs with Accordion', () => ({
     component: TabsComponent,
     props: {
@@ -57,7 +59,7 @@ storiesOf('Tabs', module)
       accordions: accordions
     },
   }),
-    { notes: 'Tabs with Accordion component' })
+  {notes: { markdown: tabsaccordionMarkdown }});
 
 storiesOf('Accordion', module)
   .add('Simple accordion component', () => ({
@@ -66,4 +68,5 @@ storiesOf('Accordion', module)
       activeIndex: 0,
       accordions: accordions
     },
-  }));
+  }),
+    {notes: { markdown: accordionMarkdown }});
